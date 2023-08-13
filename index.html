@@ -44,14 +44,11 @@
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      <button class="burger-menu" id="burger-menu">
-        <ion-icon class="bars" name="menu-outline"></ion-icon>
-      </button>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="about">
-      <img src="img/JPEG image-052B040383B0-1.jpeg" alt="water" loading="lazy" class="hero-img" />
+      <img src="img/JPEG image-052B040383B0-1.jpeg" alt="marialice" loading="lazy" class="hero-img" />
       
     </section>
 
@@ -280,10 +277,6 @@
     <!-- Ion icons scripts -->
     <script>
       const scrollUp = document.querySelector("#scroll-up");
-      const burger = document.querySelector("#burger-menu");
-      const ul = document.querySelector("nav ul");
-      const nav = document.querySelector("nav");
-      const navLink = document.querySelectorAll(".nav-link");
 
 
       scrollUp.addEventListener("click", () => {
@@ -294,15 +287,6 @@
         });
       });
 
-      burger.addEventListener("click", () => {
-        ul.classList.toggle("show");
-      });
-
-      navLink.forEach((link) =>
-      link.addEventListener("click", () => {
-        ul.classList.remove("show");
-      })
-      );
     </script>
   </body>
 </html>
