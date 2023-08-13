@@ -121,19 +121,22 @@
       <h2 class="projects-title">Some of my Recent Projects</h2>
       <div class="projects-container">
         <div class="project-container project-card">
-          <a href="https://marialiceh.github.io/guess-the-word/" target="_blank">
-          <img
-            src="img/guesstheword.png"
-            alt="guess the word game"
-            loading="lazy"
-            class="project-pic"
-          />
-        </a>
+          <a
+            href="https://marialiceh.github.io/guess-the-word/"
+            target="_blank"
+          >
+            <img
+              src="img/guesstheword.png"
+              alt="guess the word game"
+              loading="lazy"
+              class="project-pic"
+            />
+          </a>
           <h3 class="project-title">Guess The Word</h3>
           <p class="project-details">
             This is a game where the players guess one letter at a time. If the
-            player guesses all the letters correctly they win! This app uses APIs and was built
-            using JavaScript.
+            player guesses all the letters correctly they win! This app uses
+            APIs and was built using JavaScript.
           </p>
           <a
             href="https://marialiceh.github.io/guess-the-word/"
@@ -144,36 +147,43 @@
         </div>
         <div class="project-container project-card">
           <a href="https://wjnlcp.csb.app/" target="_blank">
-          <img
-            src="img/nametag.png"
-            alt="name-tag generator"
-            loading="lazy"
-            class="project-pic"
-          />
-        </a>
+            <img
+              src="img/nametag.png"
+              alt="name-tag generator"
+              loading="lazy"
+              class="project-pic"
+            />
+          </a>
           <h3 class="project-title">Name Tag Generator</h3>
           <p class="project-details">
-            This project represents a React application called "Name Tag Generator" 
-            that allows users to add and remove names from a list, and the added names 
-            persist between page visits using local storage. 
-
+            This project represents a React application called "Name Tag
+            Generator" that allows users to add and remove names from a list,
+            and the added names persist between page visits using local storage.
           </p>
-          <a href="https://wjnlcp.csb.app/" target="_blank" class="project-link">Check it Out</a>
+          <a href="https://wjnlcp.csb.app/" target="_blank" class="project-link"
+            >Check it Out</a
+          >
         </div>
         <div class="project-container project-card">
-          <a href="https://marialiceh.github.io/unplugged/" target="_blank"><img
-            src="img/unplugged.png"
-            alt="unplugged"
-            loading="lazy"
-            class="project-pic"
+          <a href="https://marialiceh.github.io/unplugged/" target="_blank"
+            ><img
+              src="img/unplugged.png"
+              alt="unplugged"
+              loading="lazy"
+              class="project-pic"
           /></a>
           <h3 class="project-title">Unplugged</h3>
           <p class="project-details">
-            A 3-page responsive website from a design comp that adapts to 
-            mobile, tablet, and desktop screens. The skills used to build this website
-            include media queries, responsive typography, and flexbox.
+            A 3-page responsive website from a design comp that adapts to
+            mobile, tablet, and desktop screens. The skills used to build this
+            website include media queries, responsive typography, and flexbox.
           </p>
-          <a href="https://marialiceh.github.io/unplugged/" target="_blank" class="project-link">Check it Out</a>
+          <a
+            href="https://marialiceh.github.io/unplugged/"
+            target="_blank"
+            class="project-link"
+            >Check it Out</a
+          >
         </div>
       </div>
     </section>
@@ -246,16 +256,17 @@
           class="socicon"
       /></a>
       <a href="https://github.com/MarialiceH" target="_blank"
-        ><img 
-        src="icons/icons8-github-400.png" 
-        alt="Github" 
-        class="socicon"
+        ><img src="icons/icons8-github-400.png" alt="Github" class="socicon"
       /></a>
-      </div>
+    </div>
 
-   
     <!-- Scroll to top -->
- 
+    <i class="scroll-up" id="scroll-up"
+      ><img
+        src="icons/icons8-scroll-up-96.png"
+        class="socicon up-arrow"
+        alt="scroll-up"
+    /></i>
 
     <!-- Footer section -->
     <footer>
@@ -263,20 +274,39 @@
       <p class="copy">
         Built with &#x2661; by
         <a href="https://www.linkedin.com/in/marialicehilt/" target="_blank"
-          >Marialice Hilt</a>
+          >Marialice Hilt</a
+        >
       </p>
-  </footer>
+    </footer>
     <!-- Website scripts -->
     <script src="assets/js/app.js"></script>
 
     <!-- Ion icons scripts -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+    <script>
+      const scrollUp = document.querySelector("#scroll-up");
+      const burger = document.querySelector("#burger-menu");
+      const ul = document.querySelector("nav ul");
+      const nav = document.querySelector("nav");
+      const navLink = document.querySelectorAll(".nav-link");
+
+
+      scrollUp.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      });
+
+      burger.addEventListener("click", () => {
+        ul.classList.toggle("show");
+      });
+
+      navLink.forEach((link) =>
+      link.addEventListener("click", () => {
+        ul.classList.remove("show");
+      })
+      );
+    </script>
   </body>
 </html>
