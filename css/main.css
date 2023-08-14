@@ -1,5 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
-
+:root {
+  --variable-name: value;
+}
+selector {
+  property: var(--variable-name);
+}
 /* Variables */
 :root {
   --font-family: Lekton;
@@ -17,6 +21,9 @@
   --transition: 0.3s;
 }
 /* Variables end */
+nav h1 {
+  font-family: "Lexend Tera";
+}
 
 h1, h2, h3 {
     font-family: "Lexend Tera";
@@ -73,6 +80,7 @@ nav {
 }
 
 nav h1 {
+  font-family: "Lexend Tera";
   color: var(--primary-color);
 }
 
@@ -92,6 +100,15 @@ nav ul {
 
 nav ul li {
   font-weight: var(--bold-font);
+}
+
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
 }
 
 /* Navbar ends */
@@ -330,7 +347,7 @@ footer {
   margin: 10px;
 }
 
-/* Media queries for responsiveness */
+/****** Media queries for responsiveness **********/
 @media screen and (max-width: 720px) {
   nav {
     padding: 1.5rem 1rem;
@@ -347,12 +364,20 @@ footer {
     transition: transform 0.5s ease-in;
   }
 
-  nav ul li {
+   nav ul li {
     margin: 8px;
   }
 
+  .burger-menu {
+    display: inline-block;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+
   .hero {
-    margin-top: -4rem;
+    margin-top: -1rem;
     flex-direction: column;
     gap: 0;
   }
@@ -365,19 +390,6 @@ footer {
   .bio {
     margin-top: -7rem;
     width: 20.5rem;
-  }
-
-  .more-about {
-    margin-top: 2rem;
-    padding: 1rem 3.5rem;
-  }
-
-  .more-about h2 {
-    text-align: center;
-  }
-
-  .more-about p {
-    text-align: justify;
   }
 
   .icon {
